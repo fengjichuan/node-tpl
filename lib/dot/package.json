@@ -1,0 +1,7 @@
+{
+  "name": "my_dot",
+  "description": "custom dot",
+  "version": "0.0.1",
+  "private": true,
+  "main":"index"
+}

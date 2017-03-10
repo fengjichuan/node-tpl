@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" /><!-- 设置Web应用以全屏模式运行 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" /><!-- 隐藏状态栏 -->
+    <meta name="format-detection" content="telephone=no" />
+    <title>天气预报</title>
+</head>
+<body class="page page-inter-index-index">
+    <div id="index-main-page">
+        城市天气预报
+    </div>
+    <div>
+        <% 
+            var getWeatherData = JSON.parse(it.getWeatherData);
+            weatherInfo = getWeatherData.weatherinfo;
+        %>
+        <div>城市：<%=weatherInfo.city%></div>
+        <div>温度：<%=weatherInfo.temp%></div>
+        <div>风向：<%=weatherInfo.WD%></div>
+        <div>风力：<%=weatherInfo.WS%></div>
+        <div>湿度：<%=weatherInfo.SD%></div>      
+    </div>
+</body>
+</html>
